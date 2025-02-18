@@ -8,7 +8,7 @@ RUN unsquashfs -f -d kaffelogic-studio /kaffelogic-studio*.snap
 # Use Focal ubuntu just to run the KL Studio
 FROM  ubuntu:focal
 
-RUN apt-get update && apt install -y evince curl desktop-file-utils locales zlib1g && apt clean
+RUN apt-get update && apt install -y evince net-tools curl desktop-file-utils locales zlib1g && apt clean
 
 RUN locale-gen en_GB.UTF-8
 RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
